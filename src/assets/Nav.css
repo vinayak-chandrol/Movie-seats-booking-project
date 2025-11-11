@@ -1,0 +1,56 @@
+/* nav.css */
+
+nav {
+  background-color: #4ca3a4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+ height: 100px;
+}
+
+/* Left section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+ 
+
+/* All links */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #facc15; /* gold/yellow hover */
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-right li a.goldpass {
+  font-weight: 600;
+  color: #ffd700;
+}
