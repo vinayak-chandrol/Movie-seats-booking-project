@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../assets/cinemahublogo.jpg";
+import Signup from "../Pages/Signup";
 import '../assets/Nav.css';
 const Nav = () => {
   return (
@@ -50,7 +50,7 @@ const Nav = () => {
         </li>
         <li>
           <Link
-            to="/account"
+            to="/signup"
             className="hover:text-yellow-400 transition duration-200"
           >
             Account

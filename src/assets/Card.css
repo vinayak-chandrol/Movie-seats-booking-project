@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.movie-card {
+  height: 510px;
+  width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin: 12px;
+  padding: 10px;
+}
+
+.movie-card .movie-image{
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
