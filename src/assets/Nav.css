@@ -15,12 +15,16 @@ nav {
 }
 
 /* Left section */
-.nav-left {
+.left {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
+.left .links li a{
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
  
 
 /* All links */
@@ -43,11 +47,28 @@ ul li a:hover {
   color: #facc15; /* gold/yellow hover */
 }
 
+/*searc barh*/
+.search input {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  width: 600px;
+  height: 45px;
+}
+
+nav .search input::placeholder {
+  color: #999;
+}
 /* Right section */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+.links-right li a{
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .nav-right li a.goldpass {
