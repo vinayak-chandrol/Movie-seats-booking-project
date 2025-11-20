@@ -1,70 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import "../assets/Signup.css";
 
-export default function Signup() {
-  const [form, setForm] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
-
-  const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!form.username || !form.email || !form.password) {
-      setError("Please fill all fields.");
-      return;
-    }
-
-    setError("");
-    console.log("Signup Successfully:", form);
-  };
-
+const Signup = () => {
   return (
-    <div className="signup-wrapper">
-      <div className="signup-card">
-        <h2 className="title">Create Account</h2>
-        <p className="subtitle">Join MovieHub and start booking tickets 🎬</p>
+    <div className="signup-container">
+      <div className="left">
+      <h2 className="signup-title">Create Account</h2>
 
-        {error && <p className="error">{error}</p>}
+      <form className="signup-form">
+        <label>First Name</label>
+        <input type="text" placeholder="Enter first name" />
 
-        <form onSubmit={handleSubmit} className="signup-form">
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            onChange={handleChange}
-          />
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter last name" />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={handleChange}
-          />
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" />
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            onChange={handleChange}
-          />
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter phone number" />
 
-          <button type="submit" className="btn">
-            Sign Up
-          </button>
-        </form>
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" />
 
-        <p className="login-text">
-          Already have an account? <a href="/login">Login</a>
-        </p>
+        <button type="submit">Sign Up</button>
+      </form>
       </div>
     </div>
   );
-}
+};
+
+export default Signup;
