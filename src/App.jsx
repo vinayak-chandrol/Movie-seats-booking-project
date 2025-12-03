@@ -8,6 +8,7 @@ import Card from './component/Card'
 import Footer from './component/Footer'
 import Signup from './Pages/Signup.jsx'
 import Home from './Pages/Home.jsx'
+import Login from './Pages/Login.jsx'
 function App() {
   
 
@@ -17,8 +18,8 @@ function App() {
        <Nav />
        <Routes>
         <Route path="/" element={<Home />} />
-        {/* ADD THIS */}
         <Route path="/Signup" element={<Signup />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
    
     
