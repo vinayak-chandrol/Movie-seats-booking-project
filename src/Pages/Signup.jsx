@@ -18,7 +18,6 @@ const Signup = () => {
     fetch("http://localhost:5000/users",{
       method:"POST",
       headers:{"Content-Type":"application/json"}, 
-
       body:JSON.stringify(form)
     })
     .then((res)=>res.json())  
@@ -27,6 +26,7 @@ const Signup = () => {
     .catch((error)=>console.error("Error:",error)); 
     
   }
+
 
 
   return (
@@ -53,6 +53,7 @@ const Signup = () => {
         <input type="password" name="password" placeholder="Enter password"  onChange={handleChange} />
 
         <button type="submit">Sign Up</button>
+        <p>Already have an account?"</p><a href="/Login">Login here</a>
       </form>
      
     </div>
