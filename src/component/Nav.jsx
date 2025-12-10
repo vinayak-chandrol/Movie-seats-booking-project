@@ -1,8 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import "../assets/Nav.css";
 
 const Nav = () => {
+
+  const navigate=useNavigate();
+  const user =  JSON.parse(localStorage.getItem("loggeduser"));
+
+  const handleLogout=()=>{
+    localStorage.removeItem("loggeduser");
+    navigate("/login");
+  }
   return (
     <nav className="nav">
 
@@ -23,7 +31,11 @@ const Nav = () => {
       {/* Right Section */}
       <ul className="links-right">
         <li><Link to="/mylist">My List</Link></li>
-        <li><Link to="/signup">Account</Link></li>
+        {user? (
+          <li onClick={handleLogout} style={{cursor: "pointer"}}>Logout</li>
+        ):(
+          <li><Link to ="/login">SignIn</Link></li>
+        )}
         <li><Link to="/goldpass">GoldPass</Link></li>
       </ul>
 
